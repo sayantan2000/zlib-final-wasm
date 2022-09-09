@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zlib Tool Using Emscripten</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>Zlib Wasm Implementation</h1>
+            <h2>Using Emscripten Tool</h2>
+        </div>
+        <div>
+            <button onclick="document.location.href='#compress'">Compress</button>
+            <button onclick="document.location.href='#decompress'">Decompress</button>
+        </div>
+    </section>
+
+    <section id="compress">
+        <div>
+            <h1>Compress</h1>
+        </div>
+        <div>
+            <input id="c_inputFile" type="file" />
+            <input type="number" id="compressionLevel" name="compressionLevel" min="-1" max="9" value="6" required>
+            <button onclick="onCompressButtonPressed()">Compress</button>
+        </div>
+    </section>
+
+    <section id="decompress">
+        <div>
+            <h1>Decompress</h1>
+        </div>
+        <div>
+            <input id="d_inputFile" type="file" />
+            <button onclick="onDecompressButtonPressed()">Decompress</button>
+        </div>
+    </section>
+    <script src="./zlibtool2.js"></script>
+    <script src="script.js"></script>
+    <script src="./download.js"></script>
+</body>
+
+</html>
